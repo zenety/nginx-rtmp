@@ -6,13 +6,10 @@ Provides `X86_64` and `arm64` platforms, for both PC and Raspberry Pi
 Built on the `alpine:3.17` image, super small and easy to use
 
 # Version records
-The version number follows the version number of the Nginx Stable branch by default, created starting with 1.21.1
+The version number follows the version number of the Nginx Stable branch by default, created starting with 1.24.0
 - `1.24.0`, `latest`
 
-# Github repository address
-Mirror Github repository: [https://github.com/zenety/nginx-rtmp](https://github.com/zenety/nginx-rtmp)
-
-# Uses of this mirror
+# Uses of this repository
 `Nginx` is a high-performance HTTP server, this image integrates the `nginx-rtmp-module` plugin, which can be configured as a live streaming server
 
 This mirror is suitable for `PS4`, `PS5` live streaming, but also can be used as a general streaming server to use
@@ -30,9 +27,9 @@ The browser accesses ``http://localhost:8080`` and displays the following screen
 ```docker run -d --name nginx-rtmp -p 1935:1935 zenety/nginx-rtmp ```
 
 ## PS5 Push Streaming
-Currently, PS5 live streaming only supports Twitch and Oilcan, so the general idea is to hijack Twitch to push the stream to `nginx-rtmp` in order to achieve the goal
-- Add the DNSMasq list and hijack the Twitch live stream address to your docker host address
-- Save the application router settings
+Currently, PS5 live streaming only supports Twitch, so the general idea is to hijack Twitch to push the stream to `nginx-rtmp` in order to achieve the goal
+
+- Reroute the Twitch DNS name to your docker host. In my case this was ams02.contribute.live-video.net.
 - Open PS5, press share and select live stream from Twitch
 - If the stream is successfully hijacked and the module is working properly, the next step is to display an ID in the web page
 
