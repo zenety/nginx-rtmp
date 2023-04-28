@@ -22,7 +22,7 @@ This mirror is suitable for `PS4`, `PS5` live streaming, but also can be used as
 
 The browser accesses ``http://localhost:8080`` and displays the following screen: the service is successfully started
 ``If you are running on router, nas or raspberry pi, please change localhost to host IP address by yourself``
-- If you don't need the panel, you can leave 8080 unmapped: `
+- If you don't need the panel, you can leave 8080 unmapped:
 
 ```docker run -d --name nginx-rtmp -p 1935:1935 zenety/nginx-rtmp ```
 
