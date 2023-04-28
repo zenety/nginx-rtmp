@@ -27,7 +27,7 @@ The browser accesses ``http://localhost:8080`` and displays the following screen
 ``If you are running on router, nas or raspberry pi, please change localhost to host IP address by yourself``
 - If you don't need the panel, you can leave 8080 unmapped: `
 
-``docker run -d --name nginx-rtmp -p 1935:1935 zenety/nginx-rtmp ```
+```docker run -d --name nginx-rtmp -p 1935:1935 zenety/nginx-rtmp ```
 
 ## PS5 Push Streaming
 Currently, PS5 live streaming only supports Twitch and Oilcan, so the general idea is to hijack Twitch to push the stream to `nginx-rtmp` in order to achieve the goal
